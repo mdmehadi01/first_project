@@ -15,9 +15,13 @@
 //echo $n2."is the biggest nuber";
 //else
 //echo $n3."is the biggest nuber";
+
+//word counT<><>
 //$Name="Md Mehadi Hassan";
 //$Count = strlen($Name);
 //echo $Count;
+
+
 //
 // function sum($n1,$n2)//parameter
 //{$sum=$n1+$n2; echo"The result is :" .$sum;}
