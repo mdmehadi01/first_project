@@ -7,5 +7,5 @@
     $DB     =  'st32';
 
     $connection = mysqli_connect($Host,$Name,$pass,$DB);
-    if($connection)
+    if(!$connection)
         echo "Connection Failed !";

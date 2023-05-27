@@ -1,7 +1,7 @@
 <?php
     include('connection.php');
 
-    if(isset($_POST))
+    if(isset($_POST['submit']))
     {
         $Name=$_POST['First_Name'];
         $Last_Name=$_POST['Last_Name'];
@@ -11,11 +11,10 @@
           (' $Name',' $Last_Name','$Email','$Password')";
 
         $result = mysqli_query($connection, $query);
-        if($result)
+        if(!$result)
             echo "Data Submit successfully";  
 
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +47,7 @@
             <label for="">Password:</label>
             <input type="password"name="Password"id="" class="password">
         </div>
-        <button class="signIn">Sing In</button>
+        <button name="submit"class="signIn">Sing In</button>
 
     </form>
 
