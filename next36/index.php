@@ -28,8 +28,9 @@
 </head>
 <body>
 
-        <form action="reg.php" class="my-form" enctype="multipart/form-data" method="POST">
+        <form action="index.php" class="my-form" enctype="multipart/form-data" method="POST">
         <div class="title">Registration Page</div>
+             <a href="list.php">Student list</a>
         <div class="form-group">
             <label for="">First_Name:</label>
             <input type="First_Name"name="First_Name"id="" class="first_Name">

@@ -37,7 +37,7 @@
 </head>
 <body>
         <div class="container">
-            <a href="reg.php">Home</a>
+            <a href="index.php">Home</a>
             <table class="table">
                 <thead>
                     <tr>

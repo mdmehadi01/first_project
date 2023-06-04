@@ -8,11 +8,12 @@
             $query = "SELECT * FROM users WHERE id = $id LIMIT 1";
             $result = mysqli_query($connection,$query);
             $Data = mysqli_fetch_assoc($result);
+            //var_dump($Data);
         }
-
-        if($_REQUEST['action'] == 'update'){
-            $id = $_REQUEST['id'];
-
+    }
+    if(isset($_POST['submit'])){
+         if($_POST['submit'] == 'Update'){
+            $id =$_POST['id'];
             $Name = $_POST['First_Name'];
             $Last_Name = $_POST['Last_Name'];
             $Email = $_POST['Email'];
@@ -20,17 +21,16 @@
 
              $query = "UPDATE users SET First_Name='$Name', Last_Name= '$Last_Name', Email= '$Email', Password = '$Password' WHERE id = $id ";
 
-            $result = mysqli_query($connection, $query);
-            if($result){
+            $Result = mysqli_query($connection, $query);
+            if($Result){
                 echo "Data updated successfully";
             }else{
                 echo "something went rong";
-            }
-            $query = "SELECT * FROM users WHERE id = $id LIMIT 1";
-            $result = mysqli_query($connection,$query);
-            $Data = mysqli_fetch_assoc($result);
-        }
+        
+          }
+       }
     }
+
 
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@
 </head>
 <body>
 
-<form action="edit.php?action=update&id=<?php echo $Data['id']; ?>" method="POST" enctype="multipart/form-data">
+<form action="edit.php?action=edit&id=<?php echo $Data['id']; ?>" method="POST" enctype="multipart/form-data">
         <div class="title">UpDate Page</div>
         <div class="form-group">
             <label for="">First_Name:</label>
@@ -64,7 +64,7 @@
             <label for="">Password:</label>
             <input type="password" name="Password" class="passwprd" value="<?php echo $Data['Password']; ?>"><br>
         </div>
-        <button name="submit"class="signIn">Update Now</button>
+        <button name="submit" value='Update'class="signIn">Update Now</button>
 
     </form>
 
