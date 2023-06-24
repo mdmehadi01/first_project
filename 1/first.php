@@ -1,5 +1,5 @@
 <?php
-class calculation
+class calculation//class
 {
     public $a,$b,$c;
     function sum()//method
@@ -15,14 +15,14 @@ class calculation
     }
 
 }
-
+////object////////
 $c1 =new calculation();
 $c1->a =20;
-$c1->b =15;
+$c1->b =5;
 
 $c2=new calculation();
-$c2->a =20;
-$c2->b =10;
+$c2->a =40;
+$c2->b =30;
 
 echo "Sum value of c1=" . $c1-> sum() . "\n";
 
